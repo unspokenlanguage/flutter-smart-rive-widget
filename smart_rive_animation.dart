@@ -25,7 +25,7 @@ class SmartRiveAnimation extends StatefulWidget {
     super.key,
     required this.animationType,
     required this.riveFilePath,
-    required this.animations,
+    this.animations = const [], // Default to an empty list if not provided
     required this.fit,
     this.triggerAnimation,
     this.stateMachineName,
