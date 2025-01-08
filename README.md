@@ -1,4 +1,4 @@
-# Smart Rive Animation
+# Smart Rive Animation Widget for Flutter
 
 ## Overview
 
