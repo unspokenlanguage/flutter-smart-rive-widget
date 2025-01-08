@@ -11,7 +11,7 @@ enum RiveAnimationType {
 class SmartRiveAnimation extends StatefulWidget {
   final RiveAnimationType animationType;
   final String riveFilePath;
-  final List<String> animations;
+  final List<String>? animations; // Make it optional
   final BoxFit fit;
   final String? triggerAnimation; // For OneshotAnimation
   final String? stateMachineName; // For StateMachineAnimation
@@ -181,7 +181,7 @@ class _SmartRiveAnimationState extends State<SmartRiveAnimation> {
       child: RiveAnimation.asset(
         widget.riveFilePath,
         animations: widget.animationType == RiveAnimationType.OneshotAnimation
-            ? widget.animations
+            ? (widget.animations ?? [])
             : [],
         fit: widget.fit,
         controllers: _controller != null ? [_controller!] : [],
