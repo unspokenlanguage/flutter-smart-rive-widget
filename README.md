@@ -72,9 +72,6 @@ SmartRiveAnimation(
 );
 ```
 
-For **One-Shot Animations**, the `GlobalKey` is not required unless you have specific programmatic control needs.
-
----
 
 ## Usage
 
@@ -94,7 +91,11 @@ SmartRiveAnimation(
 );
 ```
 
+
+For **One-Shot Animations**, the `GlobalKey` is not required unless you have specific programmatic control needs.
+
 ---
+
 
 ### State Machine Animation Example
 
