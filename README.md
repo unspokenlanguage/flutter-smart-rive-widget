@@ -72,6 +72,9 @@ SmartRiveAnimation(
 );
 ```
 
+For **One-Shot Animations**, the `GlobalKey` is not required unless you have specific programmatic control needs.
+
+---
 
 ## Usage
 
@@ -91,17 +94,20 @@ SmartRiveAnimation(
 );
 ```
 
-
-For **One-Shot Animations**, the `GlobalKey` is not required unless you have specific programmatic control needs.
-
 ---
-
 
 ### State Machine Animation Example
 
 Control more complex animations, such as a character's movement or a progress indicator:
+The GlobalKey should be defined in the parent widget or at a scope where it can be accessed for programmatically interacting with the SmartRiveAnimation widget. For example:
 
 ```dart
+final GlobalKey<SmartRiveAnimationState> riveKey = GlobalKey<SmartRiveAnimationState>();
+//typically placed as a field in a StatefulWidget class or a higher-level widget managing the animation's lifecycle
+....
+....
+....
+
 SmartRiveAnimation(
   key: riveKey,
   animationType: RiveAnimationType.StateMachineAnimation,
