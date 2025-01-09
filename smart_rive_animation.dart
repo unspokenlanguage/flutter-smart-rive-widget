@@ -37,10 +37,10 @@ class SmartRiveAnimation extends StatefulWidget {
   });
 
   @override
-  _SmartRiveAnimationState createState() => _SmartRiveAnimationState();
+  SmartRiveAnimationState createState() => SmartRiveAnimationState();
 }
 
-class _SmartRiveAnimationState extends State<SmartRiveAnimation> {
+class SmartRiveAnimationState extends State<SmartRiveAnimation> {
   RiveAnimationController? _controller;
   StateMachineController? _stateMachineController;
   Map<String, SMIInput>? _stateMachineInputs = {};
@@ -121,12 +121,14 @@ class _SmartRiveAnimationState extends State<SmartRiveAnimation> {
     }
 
     if (input is SMITrigger) {
+      // Fire the trigger if value is true
       if (value == true) {
         input.fire();
         widget.onInputAction?.call(inputName, value);
       } else {
-        debugPrint('$inputName is a trigger but was not activated (value: $value)');
+        debugPrint('$inputName is a trigger, and only "true" can activate it.');
       }
+
     } else if (input is SMIInput<bool>) {
       if (value is bool) {
         input.value = value;
