@@ -77,33 +77,8 @@ SmartRiveAnimation(
 
 You can update inputs dynamically using the `updateRiveInput` method. This method automatically handles the input type (trigger, boolean, or number).
 
-### `updateRiveInput` Function:
 
-```dart
-void updateRiveInput(String inputName, dynamic value, Map<String, SMIInput> inputs) {
-  final input = inputs[inputName];
-
-  if (input == null) {
-    debugPrint('Input $inputName not found!');
-    return;
-  }
-
-  if (input is SMITrigger && value == true) {
-    input.fire();
-    debugPrint('Trigger $inputName fired!');
-  } else if (input is SMIInput<bool>) {
-    input.value = value as bool;
-    debugPrint('Boolean $inputName set to $value');
-  } else if (input is SMIInput<double>) {
-    input.value = value as double;
-    debugPrint('Numeric $inputName set to $value');
-  } else {
-    debugPrint('Unhandled input type for $inputName');
-  }
-}
-```
-
-### Example Updating Inputs:
+### updateRiveInput - Example Updating Inputs:
 
 ```dart
 Column(
