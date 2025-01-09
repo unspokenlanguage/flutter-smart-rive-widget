@@ -42,7 +42,7 @@ Import the required library in your Dart file:
 
 ```dart
 import 'package:rive/rive.dart';
-import 'smart_rive_animation.dart';
+import 'smart_rive_animations_flutter.dart';
 ```
 
 ---
