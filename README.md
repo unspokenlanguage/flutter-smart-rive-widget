@@ -29,7 +29,7 @@ dependencies:
 ### Import the Library
 
 ```dart
-import 'path_to_riv_manager.dart';
+import 'path_to_flutter_rive_manager.dart';
 ```
 
 ## Definitions
