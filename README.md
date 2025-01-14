@@ -26,7 +26,7 @@ Add the following dependency to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  rive: ^0.10.0
+  rive: ^latest version
   http: ^0.15.0
   flutter:
     sdk: flutter
